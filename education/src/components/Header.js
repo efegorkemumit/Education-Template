@@ -9,7 +9,38 @@ import '../myswiper.css';
 
 function Header() {
   return (
-    <div>
+    <div className='relative'>
+      <header className='absolute inset-x-0 top-0 z-50 py-0'>
+
+        <div className='py-4'>
+
+          <div className='container mx-auto flex items-center justify-between'>
+               <div className=' text-white text-lg font-bold'>Logo</div>
+
+               <div className='hidden md:flex space-x-4'>
+                      <a href='#' className='text-white'>Home</a>
+                      <a href='#' className='text-white'>About Us</a>
+                      <a href='#' className='text-white'>Services</a>
+                      <a href='#' className='text-white'>Contact</a>
+               </div>
+
+               <div className='md:flex items-center space-x-4'>
+                     <a href='#' className='text-white'>Login</a>
+
+                     <a href='#' className='text-white'>
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg></a>
+
+               </div>
+
+          </div>
+
+
+        </div>
+
+
+      </header>
 
 <Swiper
         slidesPerView={1}
@@ -24,7 +55,7 @@ function Header() {
       >
         <SwiperSlide>
           
-          <section className='relative h-screen overflow-hidden'>
+          <section className='relative h-full overflow-hidden'>
             <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/1.jpg")'}}></div>
             <div className='absolute top-0 left-0 w-full h-full bg-opacity-50 bg-black'></div>
             <div className='hidden absolute top-0 left-0 w-full h-full bg-opacity-50 bg-black'></div>
@@ -53,7 +84,7 @@ function Header() {
 
         <SwiperSlide>
           
-          <section className='relative h-screen overflow-hidden'>
+          <section className='relative h-full overflow-hidden'>
             <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/2.jpg")'}}></div>
             <div className='absolute top-0 left-0 w-full h-full bg-opacity-50 bg-black'></div>
             <div className='hidden absolute top-0 left-0 w-full h-full bg-opacity-50 bg-black'></div>
@@ -82,7 +113,7 @@ function Header() {
 
         <SwiperSlide>
           
-          <section className='relative h-screen overflow-hidden'>
+          <section className='relative h-full overflow-hidden'>
             <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/3.jpg")'}}></div>
             <div className='absolute top-0 left-0 w-full h-full bg-opacity-50 bg-black'></div>
             <div className='hidden absolute top-0 left-0 w-full h-full bg-opacity-50 bg-black'></div>
