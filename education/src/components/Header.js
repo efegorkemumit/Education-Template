@@ -136,15 +136,15 @@ function Header() {
             <div ref={slideref1} className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/1.jpg")'}}></div>
             <div className='absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='hidden dark:block absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
-            <div className='flex justify-between items-center py-28 px-5 relative z-10'>
-              <div className='w-1/2 space-y-6'>
+            <div className='flex flex-col lg:flex-row justify-between items-center py-28 px-5 relative z-10'>
+              <div className='lg:w-1/2 space-y-6'>
                 <h2 className='uppercase text-3xl lg:text-6xl font-poppins font-semibold text-white'>1lorem ipmsum title</h2>
                 <h3 className='text-lg lg:text-xl font-roboto text-yellow-400'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </h3>
                 <p className='text-sm font-lora text-white'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 </p>
               </div>
-              <div className='w-1/2'>
+              <div className='lg:w-1/2'>
                 <img ref={imageRef1} src='img/slider/1.png' className='w-full h-auto'/>
               </div>
 
@@ -165,15 +165,15 @@ function Header() {
             <div ref={slideref2} className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/slider2.jpg")'}}></div>
             <div className='absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='hidden dark:block absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
-            <div className='flex justify-between items-center py-28 px-5 relative z-10'>
-            <div className='w-1/2 space-y-6'>
+            <div className='flex flex-col lg:flex-row justify-between items-center py-28 px-5 relative z-10'>
+            <div className='lg:w-1/2 space-y-6'>
                 <h2 className='uppercase text-3xl lg:text-6xl font-poppins font-semibold text-white'>lorem ipmsum title</h2>
                 <h3 className='text-lg lg:text-xl font-roboto text-yellow-400'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </h3>
                 <p className='text-sm font-lora text-white'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 </p>
               </div>
-              <div className='w-1/2'>
+              <div className='lg:w-1/2'>
                 <img ref={imageRef2} src='img/slider/2.png' className='w-full h-auto'/>
               </div>
 
@@ -194,15 +194,15 @@ function Header() {
             <div ref={slideref3} className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/slider1.jpg")'}}></div>
             <div className='absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='hidden dark:block absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
-            <div className='flex justify-between items-center py-28 px-5 relative z-10'>
-            <div className='w-1/2 space-y-6'>
+            <div className='flex flex-col lg:flex-row justify-between items-center py-28 px-5 relative z-10'>
+            <div className='lg:w-1/2 space-y-6'>
                 <h2 className='uppercase text-3xl lg:text-6xl font-poppins font-semibold text-white'>lorem ipmsum title</h2>
                 <h3 className='text-lg lg:text-xl font-roboto text-yellow-400'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </h3>
                 <p className='text-sm font-lora text-white'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 </p>
               </div>
-              <div className='w-1/2'>
+              <div className='lg:w-1/2'>
                 <img ref={imageRef3} s src='img/slider/3.png' className='w-full h-auto'/>
               </div>
 
