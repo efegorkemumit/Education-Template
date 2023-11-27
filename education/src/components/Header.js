@@ -1,13 +1,17 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import '../myswiper.css';
-
+import anime from 'animejs/lib/anime.es.js';
 
 function Header() {
+
+  const imageRef1 = useRef(null);
+  const imageRef2 = useRef(null);
+  const imageRef3 = useRef(null);
 
   const [theme, setTheme] =useState(
     localStorage.theme === 'dark' || (!('theme' in localStorage) && 
@@ -25,6 +29,22 @@ function Header() {
   useEffect(()=>{
 
     document.documentElement.classList.toggle('dark', theme==='dark');
+
+    const animateImage= ()=>{
+      anime({
+        targets: [imageRef1.current,imageRef2.current,imageRef3.current,],
+        translateX:  ['0%', '25%'],
+        translateY:  ['5%', '15%'],
+        duration: 4000,
+        easing:'linear',
+        direction: 'alternate',
+        loop:true,
+      });
+      
+
+    };
+
+    animateImage();
 
   },[theme]);
   return (
@@ -99,14 +119,14 @@ function Header() {
             <div className='hidden dark:block absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='flex justify-between items-center py-28 px-5 relative z-10'>
               <div className='w-1/2 space-y-6'>
-                <h2 className='uppercase text-3xl lg:text-6xl font-poppins font-semibold text-white'>lorem ipmsum title</h2>
+                <h2 className='uppercase text-3xl lg:text-6xl font-poppins font-semibold text-white'>1lorem ipmsum title</h2>
                 <h3 className='text-lg lg:text-xl font-roboto text-yellow-400'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem </h3>
                 <p className='text-sm font-lora text-white'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
 </p>
               </div>
               <div className='w-1/2'>
-                <img src='img/slider/1.png' className='w-full h-auto'/>
+                <img ref={imageRef1} src='img/slider/1.png' className='w-full h-auto'/>
               </div>
 
 
@@ -135,7 +155,7 @@ function Header() {
 </p>
               </div>
               <div className='w-1/2'>
-                <img src='img/slider/2.png' className='w-full h-auto'/>
+                <img ref={imageRef2} src='img/slider/2.png' className='w-full h-auto'/>
               </div>
 
 
@@ -164,7 +184,7 @@ function Header() {
 </p>
               </div>
               <div className='w-1/2'>
-                <img src='img/slider/3.png' className='w-full h-auto'/>
+                <img ref={imageRef3} s src='img/slider/3.png' className='w-full h-auto'/>
               </div>
 
 
