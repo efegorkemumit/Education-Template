@@ -27,9 +27,10 @@ function Header() {
   }
 
   useEffect(()=>{
-
     document.documentElement.classList.toggle('dark', theme==='dark');
+  },[theme]);
 
+  useEffect(()=>{
     const animateImage= ()=>{
       anime({
         targets: [imageRef1.current,imageRef2.current,imageRef3.current,],
@@ -40,13 +41,12 @@ function Header() {
         direction: 'alternate',
         loop:true,
       });
-      
-
     };
-
     animateImage();
 
-  },[theme]);
+  },[]);
+
+
   return (
     <div className='relative'>
       <header className='absolute inset-x-0 top-0 z-50 py-0'>
