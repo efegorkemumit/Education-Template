@@ -13,6 +13,10 @@ function Header() {
   const imageRef2 = useRef(null);
   const imageRef3 = useRef(null);
 
+  const slideref1 = useRef(null);
+  const slideref2 = useRef(null);
+  const slideref3 = useRef(null);
+
   const [theme, setTheme] =useState(
     localStorage.theme === 'dark' || (!('theme' in localStorage) && 
       window.matchMedia('(prefers-color-scheme:dark)').matches) ?'dark' : 'light'
@@ -46,10 +50,25 @@ function Header() {
 
   },[]);
 
+  useEffect(()=>{
+    const animateImage2= ()=>{
+      anime({
+        targets: [slideref1.current, slideref2.current, slideref3.current,],
+        scale:  [1, 1.3],
+        duration: 8000,
+        easing:'linear',
+        direction: 'alternate',
+        loop:true,
+      });
+    };
+    animateImage2();
+
+  },[]);
+
 
   return (
     <div className='relative'>
-      <header className='absolute inset-x-0 top-0 z-50 py-0'>
+      <header className='absolute inset-x-0 top-0 z-50 py-2 border-b border-slate-600 shadow-2xl'>
 
         <div className='py-4'>
 
@@ -114,8 +133,8 @@ function Header() {
         <SwiperSlide>
           
           <section className='relative h-full overflow-hidden'>
-            <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/1.jpg")'}}></div>
-            <div className='absolute top-0 left-0 w-full h-full bg-opacity-40 bg-black'></div>
+            <div ref={slideref1} className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/1.jpg")'}}></div>
+            <div className='absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='hidden dark:block absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='flex justify-between items-center py-28 px-5 relative z-10'>
               <div className='w-1/2 space-y-6'>
@@ -143,8 +162,8 @@ function Header() {
         <SwiperSlide>
           
           <section className='relative h-full overflow-hidden'>
-            <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/2.jpg")'}}></div>
-            <div className='absolute top-0 left-0 w-full h-full bg-opacity-50 bg-black'></div>
+            <div ref={slideref2} className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/slider2.jpg")'}}></div>
+            <div className='absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='hidden dark:block absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='flex justify-between items-center py-28 px-5 relative z-10'>
             <div className='w-1/2 space-y-6'>
@@ -172,8 +191,8 @@ function Header() {
         <SwiperSlide>
           
           <section className='relative h-full overflow-hidden'>
-            <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/3.jpg")'}}></div>
-            <div className='absolute top-0 left-0 w-full h-full bg-opacity-50 bg-black'></div>
+            <div ref={slideref3} className='absolute top-0 left-0 w-full h-full bg-cover bg-center'  style={{backgroundImage:'url("img/slider/slider1.jpg")'}}></div>
+            <div className='absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='hidden dark:block absolute top-0 left-0 w-full h-full bg-opacity-70 bg-black'></div>
             <div className='flex justify-between items-center py-28 px-5 relative z-10'>
             <div className='w-1/2 space-y-6'>
