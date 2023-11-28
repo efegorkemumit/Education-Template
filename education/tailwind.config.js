@@ -28,7 +28,7 @@ module.exports = {
         },
         second:{
 
-          light:'#FFC436',
+          light:'#F1B626',
           dark:'#FFF0CE'
 
         }
