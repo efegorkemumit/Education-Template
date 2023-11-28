@@ -81,7 +81,7 @@ function Header() {
                       <a href='#' className='text-white text-xl hover:underline transition '>Chemical</a>
                       <a href='#' className='text-white text-xl hover:underline transition '>Maths</a>
                       <a href='#' className='text-white text-xl hover:underline transition '>Physical</a>
-                      <a href='#' className='text-white text-xl hover:underline transition '>Contact</a>
+                      <a href='/Contact' className='text-white text-xl hover:underline transition '>Contact</a>
                </div>
 
                <div className='flex items-center space-x-4'>
