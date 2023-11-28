@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ServiceSection from '../sections/Home/ServiceSection'
+import Partwo from '../sections/Home/Partwo'
 
 function HomeScreen() {
   return (
@@ -15,6 +16,7 @@ function HomeScreen() {
 
         </div>
         <ServiceSection></ServiceSection>
+        <Partwo></Partwo>
 
         <Footer/>
     </div>
