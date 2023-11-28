@@ -23,8 +23,14 @@ module.exports = {
 
       colors:{
         primary:{
-          light:'#fff',
-          dark:'#000'
+          light:'#0174BE',
+          dark:'#0C356A'
+        },
+        second:{
+
+          light:'#FFC436',
+          dark:'#FFF0CE'
+
         }
       }
     },
