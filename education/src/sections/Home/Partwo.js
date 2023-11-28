@@ -5,37 +5,52 @@ function Partwo() {
 
 
     useEffect(()=>{
-        const animateImage= ()=>{
-          anime({
-            targets: '.title-animation',
-            translateY: [-50, 0],
-            opacity: [0, 1],
-            easing: 'easeInOutQuad',
-            duration: 800,
-            delay: anime.stagger(200),
-          });
+        const handleScroll= ()=>{
+
+        const titleElement = document.querySelector('.title-animation');
+        const cardselements = document.querySelectorAll('.card-animation');
+
+        const titleOffset = titleElement.getBoundingClientRect().top;
+        const cardsOffset = cardselements[0].getBoundingClientRect().top;
+
+        const TriggerOffset = window.innerHeight * 0.7;
+
+        if(titleOffset < TriggerOffset){
+            anime({
+                targets: '.title-animation',
+                translateY: [-50, 0],
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 800,
+                delay: anime.stagger(200),
+              });
+
+        }
+
+        if(cardsOffset < TriggerOffset){
+
+            anime({
+                targets: '.card-animation',
+                translateX: [-50, 0],
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 800,
+                delay: anime.stagger(200, { start: 300 }),
+              });
+
+        }
+        
+        };
+
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () =>{
+            window.removeEventListener('scroll', handleScroll);
+
         };
        
-
-        const animateImage2= ()=>{
-            anime({
-              targets: '.card-animation',
-              translateX: [-50, 0],
-              opacity: [0, 1],
-              easing: 'easeInOutQuad',
-              duration: 800,
-              delay: anime.stagger(200, { start: 300 }),
-            });
-          };
-
-          animateImage();
-          animateImage2();
-    
       },[]);
-
-    
-
-
   return (
     <div>
         <section className='relative'>
