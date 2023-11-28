@@ -1,6 +1,41 @@
-import React from 'react'
+import React, {useEffect,  useState} from 'react'
+import anime from 'animejs/lib/anime.es.js';
 
 function Partwo() {
+
+
+    useEffect(()=>{
+        const animateImage= ()=>{
+          anime({
+            targets: '.title-animation',
+            translateY: [-50, 0],
+            opacity: [0, 1],
+            easing: 'easeInOutQuad',
+            duration: 800,
+            delay: anime.stagger(200),
+          });
+        };
+       
+
+        const animateImage2= ()=>{
+            anime({
+              targets: '.card-animation',
+              translateX: [-50, 0],
+              opacity: [0, 1],
+              easing: 'easeInOutQuad',
+              duration: 800,
+              delay: anime.stagger(200, { start: 300 }),
+            });
+          };
+
+          animateImage();
+          animateImage2();
+    
+      },[]);
+
+    
+
+
   return (
     <div>
         <section className='relative'>
@@ -13,7 +48,7 @@ function Partwo() {
                     <div className='items-center flex flex-wrap'>
                         <div className='w-full lg:w-6-/12 px-4  ml-auto mr-auto text-center  pt-32'>
 
-                            <h1 className='text-white font-semibold text-5xl'>lorem ipsum</h1>
+                            <h1 className='text-white font-semibold text-5xl title-animation'>lorem ipsum</h1>
 
                             <p className='mt-4 text-lg text-white' >
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -41,7 +76,7 @@ function Partwo() {
                 <div className='container mx-auto px-4'>
                     <div className='flex flex-wrap'>
 
-                        <div className='lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center'>
+                        <div className='lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center card-animation'>
                             <div className='relative flex flex-col bg-white w-full mb-8 shadow-lg rounded-lg'>
                                 <div className='p-3 text-center items-center justify-center inline-flex'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 p-2 rounded-full text-center justify-center items-center bg-slate-900 text-white">
@@ -55,7 +90,7 @@ function Partwo() {
 
                         </div>
 
-                        <div className='lg:pt-4 pt-6 w-full md:w-4/12 px-4 text-center'>
+                        <div className='lg:pt-4 pt-6 w-full md:w-4/12 px-4 text-center card-animation'>
                             <div className='relative flex flex-col bg-white w-full mb-8 shadow-lg rounded-lg'>
                                 <div className='p-3 text-center items-center justify-center inline-flex'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 p-2 rounded-full text-center justify-center items-center bg-slate-900 text-white">
@@ -69,7 +104,7 @@ function Partwo() {
 
                         </div>
 
-                        <div className='lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center'>
+                        <div className='lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center card-animation'>
                             <div className='relative flex flex-col bg-white w-full mb-8 shadow-lg rounded-lg'>
                                 <div className='p-3 text-center items-center justify-center inline-flex'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 p-2 rounded-full text-center justify-center items-center bg-slate-900 text-white">
