@@ -24,9 +24,9 @@ function ServiceSection() {
     <div className='container mx-auto p-8'>
 
     <div className='  p-3 text-center'>
-          <p className='text-4xl font-roboto font-semibold uppercase mt-6 mb-20 '>
-            <span className='border-b-2 font-extralight  border-gray-800 dark:border-slate-300 text-black dark:text-white'>
-            Our services
+          <p className='text-4xl    mt-6 mb-20 '>
+            <span className='border-b-2 font-lora  border-gray-800 dark:border-slate-300 text-black dark:text-white'>
+            Our Services
             </span>
             </p>
 
