@@ -23,6 +23,34 @@ function Menu() {
   return (
     <div>
 
+      <div className='fixed left-0 top-0 w-full h-full z-50 bg-black bg-opacity-30 shadow'>
+        <div className='absolute left-0 top-0 w-72 h-full z-50 bg-primary-light dark:bg-primary-dark text-second-light dark:text-second-dark'>
+
+<div className='absolute right-3 top-3 cursor-pointer'>
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+</div>
+
+<h3 className='font-lora font-semibold p-6 text-3xl'> Menu</h3>
+
+<div>
+<Link to="/"> <a className='block px-4 py-2 font-semibold font-roboto hover:underline' href='#'>Home</a> </Link> 
+<Link to="/Contact"> <a className='block px-4 py-2 font-semibold font-roboto hover:underline' href='#'>Contact</a> </Link> 
+<Link to="/"> <a className='block px-4 py-2 font-semibold font-roboto hover:underline' href='#'>Home</a> </Link> 
+<Link to="/Contact"> <a className='block px-4 py-2 font-semibold font-roboto hover:underline' href='#'>Contact</a> </Link> 
+<Link to="/"> <a className='block px-4 py-2 font-semibold font-roboto hover:underline' href='#'>Home</a> </Link> 
+<Link to="/Contact"> <a className='block px-4 py-2 font-semibold font-roboto hover:underline' href='#'>Contact</a> </Link> 
+</div>
+
+
+        </div>
+
+
+      </div>
+
 <div className='container mx-auto flex items-center justify-between px-4'>
                <div className=' text-white text-xl  transition font-bold'>Logo</div>
 
