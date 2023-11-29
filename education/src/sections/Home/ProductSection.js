@@ -22,8 +22,8 @@ function ProductSection() {
     <div>
 
 <Swiper
-        slidesPerView={4}
-        centeredSlides={true}
+        slidesPerView={5}
+        centeredSlides={false}
         spaceBetween={30}
         grabCursor={true}
         pagination={{
