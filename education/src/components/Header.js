@@ -18,6 +18,36 @@ function Header() {
   const slideref2 = useRef(null);
   const slideref3 = useRef(null);
 
+  const [scrolling, setScorlling] = useState(false);
+
+  useEffect(()=>{
+    const handleScroll = ()=>
+    {
+      const headerHeight =document.querySelector('header').offsetHeight;
+
+      if(window.scrollY > headerHeight)
+      {
+        setScorlling(true);
+      }
+      else
+      {
+        setScorlling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return()=>{
+      window.removeEventListener('scroll', handleScroll);
+    }
+
+
+  },[]);
+
+  const HeaderClassName= scrolling
+  ?'fixed bg-primary-light dark:bg-primary-dark text-second-light dark:text-second-dark inset-x-0 top-0 z-50 py-2 border-b border-slate-600 shadow-2xl'
+  :'absolute inset-x-0 top-0 z-50 py-2 border-b border-slate-600 shadow-2xl';
+
   
 
   useEffect(()=>{
@@ -54,7 +84,7 @@ function Header() {
 
   return (
     <div className='relative'>
-      <header className='absolute inset-x-0 top-0 z-50 py-2 border-b border-slate-600 shadow-2xl'>
+      <header className={HeaderClassName}>
 
         <div className='py-4'>
 
