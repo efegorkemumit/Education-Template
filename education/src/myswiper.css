@@ -16,7 +16,13 @@
     align-items: center;
   }
   
-  
+  .dark .mySwiper{
+    background-color: #0C356A;
+  }
+  .dark .swiper-slide
+  {
+    background-color: #0C356A;
+  }
   
   .swiper {
     margin-left: auto;
