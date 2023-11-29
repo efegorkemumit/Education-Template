@@ -5,7 +5,14 @@ function Partwo() {
 
 
     useEffect(()=>{
+
+        let animationsPlayed = false;
+
         const handleScroll= ()=>{
+
+            if(animationsPlayed){
+                return;
+            }
 
         const titleElement = document.querySelector('.title-animation');
         const cardselements = document.querySelectorAll('.card-animation');
@@ -23,6 +30,10 @@ function Partwo() {
                 easing: 'easeInOutQuad',
                 duration: 800,
                 delay: anime.stagger(200),
+                complete:()=>
+                {
+                    animationsPlayed= true;
+                }
               });
 
         }
@@ -36,6 +47,10 @@ function Partwo() {
                 easing: 'easeInOutQuad',
                 duration: 800,
                 delay: anime.stagger(200, { start: 300 }),
+                complete:()=>
+                {
+                    animationsPlayed= true;
+                }
               });
 
         }
