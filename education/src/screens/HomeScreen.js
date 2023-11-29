@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ServiceSection from '../sections/Home/ServiceSection'
 import Partwo from '../sections/Home/Partwo'
+import ProductSection from '../sections/Home/ProductSection'
 
 function HomeScreen() {
   return (
@@ -17,6 +18,7 @@ function HomeScreen() {
         </div>
         <ServiceSection></ServiceSection>
         <Partwo></Partwo>
+        <ProductSection></ProductSection>
 
         <Footer/>
     </div>
