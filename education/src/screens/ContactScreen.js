@@ -1,6 +1,7 @@
 import React from 'react'
 import HeaderFixed from '../components/HeaderFixed'
 import Footer from '../components/Footer'
+import ServiceSection from '../sections/Home/ServiceSection'
 
 function ContactScreen() {
   return (
@@ -18,6 +19,8 @@ function ContactScreen() {
 
             </section>
 
+
+            <ServiceSection></ServiceSection>
 
             <Footer/>
         

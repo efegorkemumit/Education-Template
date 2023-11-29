@@ -1,5 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import anime from 'animejs/lib/anime.es.js';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -18,6 +19,55 @@ const productData=[
     {id:9, title:'Product 1', images:'img/courseimages/9.jpg'},
 ]
 function ProductSection() {
+
+  
+  
+  useEffect(()=>{
+
+    let animationsPlayed = false;
+
+    const handleScroll= ()=>{
+
+        if(animationsPlayed){
+            return;
+        }
+
+    const titleElement = document.querySelectorAll('.topproduct');
+
+    const titleOffset = titleElement[0].getBoundingClientRect().top;
+
+    const TriggerOffset = window.innerHeight * 0.7;
+
+    if(titleOffset < TriggerOffset){
+        anime({
+           targets: '.topproduct',
+            translateX: 0,
+            opacity: [0, 1],
+            easing: 'easeInOutQuad',
+            duration: 800,
+            delay: anime.stagger(100, {from: 'last'}),
+            complete:()=>
+                {
+                    animationsPlayed= true;
+                }
+            
+          });
+
+    }
+
+   
+    
+    };
+
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () =>{
+        window.removeEventListener('scroll', handleScroll);
+
+    };
+   
+  },[]);
   return (
     <div>
 
@@ -98,10 +148,10 @@ function ProductSection() {
 
            
             {productData.map((product)=>(
-
+<div className='topproduct'>
     <ProductCard title={product.title} images={product.images}/>
         
-
+    </div>
 ))}
 
 
