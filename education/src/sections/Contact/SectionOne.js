@@ -1,6 +1,41 @@
-import React from 'react'
+import React, {useEffect,  useState} from 'react'
+import anime from 'animejs/lib/anime.es.js';
 
 function SectionOne() {
+    useEffect(()=>{
+        const animateImage= ()=>{
+          anime({
+            targets: '.person',
+            innerHTML: [0, 150],
+            easing: 'linear',
+            round: 1 // Will round the animated value to 1 decimal
+          });
+
+          anime({
+            targets: '.customers',
+            innerHTML: [0, 15000],
+            easing: 'linear',
+            round: 1 // Will round the animated value to 1 decimal
+          });
+
+          anime({
+            targets: '.ticket',
+            innerHTML: [0, 1500000],
+            easing: 'linear',
+            round: 10 // Will round the animated value to 1 decimal
+          });
+
+          anime({
+            targets: '.order',
+            innerHTML: [0, 9999],
+            easing: 'linear',
+            round: 10 // Will round the animated value to 1 decimal
+          });
+        };
+        animateImage();
+    
+      },[]);
+
   return (
     <section className='relative'>
     <div className='relative pt-96 pb-80 lg:pt-32 lg:pb-32 flex content-center items-center justify-center'>
@@ -13,29 +48,29 @@ function SectionOne() {
                 <div className='w-full lg:w-6-/12 px-4  ml-auto mr-auto text-center  pt-20'>
                 <div className='grid grid-cols-1 lg:grid-cols-4 gap-8 mb-9 mt-3'>
         
-        <div className='text-center p-4 rounded-xl service-item'>
+        <div className='text-center p-4 rounded-xl '>
           
-                <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black'>Service 1</h3>
-                <p className='dark:text-white text-black'>Description lorem ipmsum falan</p>
+                <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black person'> </h3>
+                <p className='dark:text-white text-black'>Person</p>
         </div>
 
-        <div className='text-center p-4 rounded-xl service-item'>
+        <div className='text-center p-4 rounded-xl '>
        
        
-        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black'>Service 1</h3>
-                <p className='dark:text-white text-black'>Description lorem ipmsum falan</p>
+        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black customers'></h3>
+                <p className='dark:text-white text-black'>Customers</p>
         </div>
 
-        <div className='text-center p-4 rounded-xl service-item'>
+        <div className='text-center p-4 rounded-xl '>
        
-        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black'>Service 1</h3>
-                <p className='dark:text-white text-black'>Description lorem ipmsum falan</p>
+        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black ticket'></h3>
+                <p className='dark:text-white text-black'>Ticket</p>
         </div>
 
-        <div className='text-center p-4 rounded-xl service-item'>
+        <div className='text-center p-4 rounded-xl '>
         
-        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black'>Service 1</h3>
-                <p className='dark:text-white text-black'>Description lorem ipmsum falan</p>
+        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black order'></h3>
+                <p className='dark:text-white text-black'>Order</p>
         </div>
 
           
