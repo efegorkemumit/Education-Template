@@ -2,12 +2,15 @@ import React from 'react'
 import HeaderFixed from '../components/HeaderFixed'
 import Footer from '../components/Footer'
 import ServiceSection from '../sections/Home/ServiceSection'
+import SectionOne from '../sections/Contact/SectionOne'
 
 function ContactScreen() {
   return (
     <div>
 
         <HeaderFixed/>
+
+        <SectionOne></SectionOne>
 
         <section className='relative h-full overflow-hidden'>
 
