@@ -50,26 +50,26 @@ function SectionOne() {
         
         <div className='text-center p-4 rounded-xl '>
           
-                <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black person'> </h3>
+                <h3 className='text-4xl font-semibold mb-2 dark:text-white text-white person'> </h3>
                 <p className='dark:text-white text-black'>Person</p>
         </div>
 
         <div className='text-center p-4 rounded-xl '>
        
        
-        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black customers'></h3>
+        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-white customers'></h3>
                 <p className='dark:text-white text-black'>Customers</p>
         </div>
 
         <div className='text-center p-4 rounded-xl '>
        
-        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black ticket'></h3>
+        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-white ticket'></h3>
                 <p className='dark:text-white text-black'>Ticket</p>
         </div>
 
         <div className='text-center p-4 rounded-xl '>
         
-        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-black order'></h3>
+        <h3 className='text-4xl font-semibold mb-2 dark:text-white text-white order'></h3>
                 <p className='dark:text-white text-black'>Order</p>
         </div>
 
